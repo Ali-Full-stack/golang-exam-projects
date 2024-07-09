@@ -1,0 +1,49 @@
+syntax="proto3";
+
+option go_package="./protos/paymentProto";
+
+service PaymentService{
+    rpc AddClientCard(CardRequest) returns (empty){}
+    rpc DeleteClientCard(RequestId) returns (CardResponse){}
+    rpc MakeOrderPayment(PaymentRequest) returns (PaymentResponse){}
+    rpc MakePurchase(PurchaseRequest) returns(PurchaseResponse){}
+}
+
+message RequestId{
+    string role = 1;
+    string id = 2;
+}
+message CardResponse{
+    string status = 1 ;
+}
+
+message CardRequest {
+    string role = 1;
+    string id  = 2;
+    string card_number = 3 ;
+    float balance = 4;
+}
+message empty{}
+
+message PaymentRequest{
+    string client_id = 1;
+    string driver_id = 2;
+    int32 discount = 3; 
+    float total_amount = 4 ;
+} 
+message PaymentResponse {
+    string status =1 ;
+    float driver_amount = 2;
+    float total = 3 ;
+    float  discount = 4 ;
+    float discount_amount = 5 ;
+    float total_with_discount = 6;
+}
+
+message PurchaseRequest {
+    float amount  = 1;  
+}
+message PurchaseResponse {
+    float amount  = 1;  
+    string status = 2 ; 
+}

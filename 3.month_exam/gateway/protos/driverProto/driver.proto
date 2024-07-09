@@ -1,0 +1,43 @@
+syntax="proto3";
+
+option go_package="protos/driverProto";
+
+service DriverService {
+    rpc CreateDriver(DriverInfo) returns (DriverID){}
+    rpc DeleteDriver(DriverID) returns (DriverResponse){}
+    rpc GetAvailableDriver(GetLocationRequest) returns (GetLocationResponse){}
+}
+
+message DriverInfo {
+    string id = 1;
+    string name = 2;
+    string email = 3;
+    string phone =4 ;
+    string working_region = 5;
+    string vehicle = 6 ;
+    string status = 7;
+    string hired_at = 8;
+    DriverAddress driver_address = 9;
+}
+message DriverAddress {
+    string city = 1 ;
+    string region = 2 ;
+    string home_address = 3;
+}
+
+message DriverID {
+    string  id = 1;  
+}
+message DriverResponse {
+    string  status = 1;
+}
+message GetLocationRequest {
+    string location =1 ;
+}
+message GetLocationResponse {
+    string id = 1 ;
+    string name =2 ;
+    string email = 3 ;
+    string phone = 4 ;
+    string vehicle = 5 ;
+}
