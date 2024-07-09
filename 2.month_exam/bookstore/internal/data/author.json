@@ -1,0 +1,81 @@
+[{  
+    "author_id": 1,
+    "name": "J.K. Rowling",
+    "birth_date": "1965-07-31",
+    "biography": "J.K. Rowling is a British author who wrote the Harry Potter fantasy series, which has won multiple awards and sold more than 500 million copies, becoming the best-selling book series in history.",
+    "created_at": "2023-01-01",
+    "updated_at": "2023-01-01"
+  },
+  { 
+    "author_id": 2,
+    "name": "George R.R. Martin",
+    "birth_date": "1948-09-20",
+    "biography": "George R.R. Martin is an American novelist and short story writer, best known for his work in the fantasy genre. He is the author of the A Song of Ice and Fire series, which was adapted into the popular HBO series Game of Thrones.",
+    "created_at": "2023-01-02",
+    "updated_at": "2023-01-02"
+  },
+  {
+    "author_id": 3,
+    "name": "Haruki Murakami",
+    "birth_date": "1949-01-12",
+    "biography": "Haruki Murakami is a Japanese writer. His works of fiction and non-fiction have garnered international acclaim and numerous awards, including the Gunzburg Award, the Tanizaki Prize, and the Franz Kafka Prize.",
+    "created_at": "2023-01-03",
+    "updated_at": "2023-01-03"
+  },
+  {
+    "author_id": 4,
+    "name": "Neil Gaiman",
+    "birth_date": "1960-11-10",
+    "biography": "Neil Gaiman is an English author of short fiction, novels, comic books, graphic novels, audio theatre, and films. His notable works include the comic book series The Sandman and novels Stardust, Coraline, and The Graveyard Book.",
+    "created_at": "2023-01-04",
+    "updated_at": "2023-01-04"
+  },
+  {
+    "author_id": 5,
+    "name": "Chimamanda Ngozi Adichie",
+    "birth_date": "1977-09-15",
+    "biography": "Chimamanda Ngozi Adichie is a Nigerian writer whose works of fiction and non-fiction have been translated into over thirty languages. Her novel Half of a Yellow Sun won the Orange Prize for Fiction.",
+    "created_at": "2023-01-05",
+    "updated_at": "2023-01-05"
+  },
+  {
+    "author_id": 6,
+    "name": "Margaret Atwood",
+    "birth_date": "1939-11-18",
+    "biography": "Margaret Atwood is a Canadian poet, novelist, literary critic, essayist, inventor, and environmental activist. She is the author of more than 40 books of fiction, poetry, and critical essays.",
+    "created_at": "2023-01-06",
+    "updated_at": "2023-01-06"
+  },
+  {
+    "author_id": 7,
+    "name": "Ernest Hemingway",
+    "birth_date": "1899-07-21",
+    "biography": "Ernest Hemingway was an American novelist, short story writer, journalist, and sportsman. His economical and understated style had a strong influence on 20th-century fiction, while his life of adventure and his public image influenced later generations.",
+    "created_at": "2023-01-07",
+    "updated_at": "2023-01-07"
+  },
+  {
+    "author_id": 8,
+    "name": "Maya Angelou",
+    "birth_date": "1928-04-04",
+    "biography": "Maya Angelou was an American poet, memoirist, and civil rights activist. She is best known for her series of seven autobiographical novels, which focus on her childhood and early adult experiences.",
+    "created_at": "2023-01-08",
+    "updated_at": "2023-01-08"
+  },
+  {
+    "author_id": 9,
+    "name": "Gabriel García Márquez",
+    "birth_date": "1927-03-06",
+    "biography": "Gabriel García Márquez was a Colombian novelist, short-story writer, screenwriter, and journalist. He is considered one of the most significant authors of the 20th century, particularly in the Spanish language.",
+    "created_at": "2023-01-09",
+    "updated_at": "2023-01-09"
+  },
+  {
+    "author_id": 11,
+    "name": "Toni Morrison",
+    "birth_date": "1931-02-18",
+    "biography": "Toni Morrison was an American novelist, essayist, book editor, and college professor. She was the first African American woman to win the Nobel Prize in Literature in 1993.",
+    "created_at": "2023-01-10",
+    "updated_at": "2023-01-10"
+  }
+]

@@ -1,0 +1,123 @@
+[
+    {
+      "book_id": 1,
+      "title": "Harry Potter and the Philosopher's Stone",
+      "category": "Fantasy",
+      "author_id": 1,
+      "publication_date": "1997-06-26",
+      "isbn": "978-0-7475-3269-9",
+      "description": "The first novel in the Harry Potter series and Rowling's debut novel, in which a young Harry Potter learns on his 11th birthday that he is a wizard.",
+      "created_at": "2023-01-01",
+      "updated_at": "2023-01-01"
+    },
+    {
+      "book_id": 2,
+      "title": "A Game of Thrones",
+      "category": "Fantasy",
+      "author_id": 2,
+      "publication_date": "1996-08-01",
+      "isbn": "978-0-553-57340-4",
+      "description": "The first novel in the A Song of Ice and Fire series, in which several noble families fight for control of the Seven Kingdoms of Westeros.",
+      "created_at": "2023-01-02",
+      "updated_at": "2023-01-02"
+    },
+    {
+      "book_id": 3,
+      "title": "The Wind-Up Bird Chronicle",
+      "category": "Fiction",
+      "author_id": 3,
+      "publication_date": "1994-06-01",
+      "isbn": "978-0-375-40369-6",
+      "description": "A novel that follows the life of Toru Okada as he searches for his wife's missing cat, leading him to encounter a number of strange characters and events.",
+      "created_at": "2023-01-03",
+      "updated_at": "2023-01-03"
+    },
+    {
+      "book_id": 4,
+      "title": "American Gods",
+      "category": "Fantasy",
+      "author_id": 4,
+      "publication_date": "2001-04-30",
+      "isbn": "978-0-380-97365-8",
+      "description": "A novel in which the mysterious Shadow is hired as a bodyguard for a man who turns out to be one of the older gods of ancient mythology, and who is on a cross-country trip across the United States.",
+      "created_at": "2023-01-04",
+      "updated_at": "2023-01-04"
+    },
+    {
+      "book_id": 5,
+      "title": "Half of a Yellow Sun",
+      "category": "Historical Fiction",
+      "author_id": 5,
+      "publication_date": "2006-09-12",
+      "isbn": "978-1-4000-7658-3",
+      "description": "A novel that tells the story of the Biafran War in Nigeria through the perspectives of three characters, against the backdrop of the country's transition from colonial rule to independence.",
+      "created_at": "2023-01-05",
+      "updated_at": "2023-01-05"
+    },
+    {
+      "book_id": 6,
+      "title": "The Handmaid's Tale",
+      "category": "Fiction",
+      "author_id": 6,
+      "publication_date": "1985-04-25",
+      "isbn": "978-0-385-49081-8",
+      "description": "The Handmaid's Tale is a dystopian novel by Canadian author Margaret Atwood. Set in a near-future New England, in a totalitarian state, it follows the story of Offred, one of the diminishing class of Handmaids on which the regime depends for repopulation.",
+      "created_at": "2023-02-01",
+      "updated_at": "2023-02-01"
+    },
+    {
+      "book_id": 7,
+      "title": "The Sun Also Rises",
+      "category": "Fiction",
+      "author_id": 7,
+      "publication_date": "1926-10-22",
+      "isbn": "978-0-684-82730-6",
+      "description": "The Sun Also Rises is a 1926 novel by American author Ernest Hemingway. It is considered one of Hemingway's masterpieces and is described as a quintessential modernist novel and a roman à clef.",
+      "created_at": "2023-02-02",
+      "updated_at": "2023-02-02"
+    },
+    {
+      "book_id": 8,
+      "title": "I Know Why the Caged Bird Sings",
+      "category": "Memoir",
+      "author_id": 10,
+      "publication_date": "1969-06-17",
+      "isbn": "978-0-375-50789-2",
+      "description": "I Know Why the Caged Bird Sings is a 1969 autobiography by American writer and poet Maya Angelou. It is the first of seven autobiographical works by Angelou, depicting her life up to the age of 16.",
+      "created_at": "2023-02-03",
+      "updated_at": "2023-02-03"
+    },
+    {
+      "book_id": 9,
+      "title": "One Hundred Years of Solitude",
+      "category": "Fiction",
+      "author_id": 9,
+      "publication_date": "1967-06-05",
+      "isbn": "978-0-06-088001-8",
+      "description": "One Hundred Years of Solitude is a landmark 1967 novel by Colombian author Gabriel García Márquez. It tells the multi-generational story of the Buendía family, whose patriarch, José Arcadio Buendía, founded the fictional town of Macondo.",
+      "created_at": "2023-02-04",
+      "updated_at": "2023-02-04"
+    },
+    {
+      "book_id": 12,
+      "title": "Beloved",
+      "category": "Fiction",
+      "author_id": 11,
+      "publication_date": "1987-09-02",
+      "isbn": "978-0-307-47538-1",
+      "description": "Beloved is a 1987 novel by the American writer Toni Morrison. Set after the American Civil War, it is inspired by the story of the escaped slave Margaret Garner, who, at the age of 18, killed her young daughter rather than have her enslaved.",
+      "created_at": "2023-02-05",
+      "updated_at": "2023-02-05"
+    },
+    {
+      "book_id": 15,
+      "title": "American Gods",
+      "category": "Fantasy",
+      "author_id": 1,
+      "publication_date": "2001-04-30",
+      "isbn": "978-0-380-97389-0",
+      "description": "A masterpiece in which the mysterious Shadow is hired as a bodyguard for a man who turns out to be one of the older gods of ancient mythology, and who is on a cross-country travel around the USA.",
+      "created_at": "2009-02-05",
+      "updated_at": "2009-02-05"
+  }
+]
