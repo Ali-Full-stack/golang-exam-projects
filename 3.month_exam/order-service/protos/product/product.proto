@@ -1,0 +1,31 @@
+syntax="proto3";
+
+option go_package="./protos/product";
+
+service ProductService {
+    rpc CreateProducts(stream ProductInfo) returns(ProductResponse){}
+    rpc DeleteProduct (ProductID) returns (ProductResponse){}
+    rpc GetAllProducts (CategoryRequest) returns (stream ProductInfo){}
+}
+
+message ProductInfo {
+    string id = 1;
+    string name = 2;
+    string category =3;
+    int32 quantity = 4; 
+    float price = 5;
+    string Created_at = 6;
+    string Expired_at = 7; 
+}
+
+message ProductID {
+    string ProductID = 1;
+}
+
+message ProductResponse {
+    string status = 1;
+    float total_amount = 2;
+}
+message CategoryRequest {
+    string category_name = 1;
+}
