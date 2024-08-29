@@ -1,0 +1,71 @@
+syntax="proto3";
+
+option go_package="./protos/hotel";
+
+service HotelService {
+    rpc CreateHotel(HotelInfo) returns (HotelID);
+    rpc CreateHotelRoom (RoomInfo) returns(HotelResponse);
+    rpc UpdateHotel(HotelInfo) returns(HotelResponse);
+    rpc UpdateHotelRoom(RoomInfo) returns (HotelResponse);
+    rpc DeleteHotel(HotelID) returns(HotelResponse);
+    rpc DeleteHotelRoom(RoomType) returns(HotelResponse);
+    rpc GetAllHotels(Empty) returns (stream HotelInfo);
+    rpc GetHotelById (HotelID) returns (HotelWithRoom);
+    rpc CheckAvailableRooms(RoomCount) returns (RoomResponse);
+    rpc UpdateRoomCount(RoomCount) returns (CountResponse);
+}
+
+message HotelInfo {
+    string name =1;
+    float rating = 2;
+    Address Address = 3;
+}
+message HotelWithRoom {
+    string name =1;
+    float rating = 2;
+    Address address = 3;
+    repeated Room rooms =4;
+}
+message Address {
+    string City = 1;
+    string Region = 2;
+    string street = 3;
+}
+message Room {
+    string type = 1;
+    float PricePerNight = 2;
+    int32 totalRooms = 3;
+}
+message RoomType {
+    string hotel_id = 1;
+    string type = 2 ;
+}
+
+message RoomInfo {
+    string hote_id = 1;
+    repeated Room rooms = 2;
+}
+message HotelID {
+    string id = 1;
+}
+message HotelResponse {
+    string message = 1;
+}
+
+message RoomCount {
+    string hotelId = 1;
+    string roomType = 2;
+    int32 total = 3;
+}
+
+message RoomResponse {
+    string type = 1;
+    float   pricePerNight = 2;
+    int32 count = 3;
+}
+message CountResponse {
+    string type = 1;
+    int32 count = 2;
+    string status =3;
+}
+message Empty {}
