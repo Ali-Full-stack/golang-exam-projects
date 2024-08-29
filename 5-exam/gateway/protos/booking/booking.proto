@@ -1,0 +1,50 @@
+syntax="proto3";
+
+option go_package="./protos/booking";
+
+service BookingService{
+    rpc CreateBooking(BookingInfo) returns (BookingResponse);
+    rpc GetBookingById(BookingId) returns (BookingResponse);
+    rpc DeleteBooking(BookingId) returns (Response);
+}
+
+message BookingInfo {
+    string user_id = 1;
+    string hotel_id = 2;
+    string roomType = 3;
+    int32 totalDays = 4;
+    string checkInDate =5;
+    string checkOutDate = 6;
+    float totalAmount = 7;
+}
+
+message BookingResponse {
+    string booking_id = 1;
+    string user_id = 2;
+    string hotel_id = 3;
+    string roomType = 4;
+    int32 totalDays = 5;
+    string checkInDate =6;
+    string checkOutDate = 7;
+    float totalAmount = 8;
+    string status = 9;
+}
+message BookingEmail {
+    string booking_id = 1;
+    string user_id = 2;
+    string hotel_id = 3;
+    string roomType = 4;
+    int32 totalDays = 5;
+    string checkInDate =6;
+    string checkOutDate = 7;
+    float totalAmount = 8;
+    string status = 9;
+    string username=10;
+    string email =11;
+}
+message BookingId {
+        string id = 1;
+}
+message Response {
+    string message = 1; 
+}

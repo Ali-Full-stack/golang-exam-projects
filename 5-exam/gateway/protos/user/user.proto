@@ -1,0 +1,41 @@
+syntax="proto3";
+
+
+option go_package="./protos/user";
+
+service UserService{
+    rpc RegisterUser(UserInfo) returns(UserID);
+    rpc LoginUser(UserLogin) returns(UserToken);
+    rpc UpdateUser(UserInfo) returns(UserResponse);
+    rpc DeleteUser(UserID) returns (UserResponse);
+    rpc GetAllUsers(Empty) returns (stream UserWithID);
+    rpc GetUserById(UserID) returns (UserWithID);
+}
+
+message Empty{}
+
+message UserInfo{
+    string username = 2;
+    string email = 3 ;
+    string password = 4;
+}
+message UserWithID {
+    string id = 1;
+    string username = 2;
+    string email = 3 ;
+}
+message UserID {
+    string id = 1;
+}
+message UserLogin {
+    string id = 1;
+    string password = 2;
+}
+message UserToken {
+    string token = 1;
+    int32 expiryInMin = 2 ;
+}
+message UserResponse{
+    string message =1 ;
+}
+
