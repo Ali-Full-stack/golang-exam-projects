@@ -49,7 +49,10 @@ func (u *UserHandler) RegisterNewUser(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	w.Header().Set("Content-Type", "application/json")
-	json.NewEncoder(w).Encode(resp)
+	if err :=json.NewEncoder(w).Encode(resp); err != nil {
+		http.Error(w, "Unable to send a response:", http.StatusInternalServerError)
+		return
+	}
 }
 // @Router  				/api/users/login [post]
 // @Summary 			User Login
