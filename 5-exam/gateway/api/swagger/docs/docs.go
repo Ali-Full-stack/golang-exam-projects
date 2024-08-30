@@ -36,8 +36,8 @@ const docTemplate = `{
                 "parameters": [
                     {
                         "type": "string",
-                        "description": "Role",
-                        "name": "role",
+                        "description": "User Token",
+                        "name": "token",
                         "in": "header",
                         "required": true
                     },
@@ -94,8 +94,8 @@ const docTemplate = `{
                 "parameters": [
                     {
                         "type": "string",
-                        "description": "Role",
-                        "name": "role",
+                        "description": "User Token",
+                        "name": "token",
                         "in": "header",
                         "required": true
                     },
@@ -144,8 +144,8 @@ const docTemplate = `{
                 "parameters": [
                     {
                         "type": "string",
-                        "description": "Role",
-                        "name": "role",
+                        "description": "User Token",
+                        "name": "token",
                         "in": "header",
                         "required": true
                     },
@@ -196,8 +196,8 @@ const docTemplate = `{
                 "parameters": [
                     {
                         "type": "string",
-                        "description": "Role",
-                        "name": "role",
+                        "description": "User Token",
+                        "name": "token",
                         "in": "header",
                         "required": true
                     }
@@ -242,8 +242,8 @@ const docTemplate = `{
                 "parameters": [
                     {
                         "type": "string",
-                        "description": "Role",
-                        "name": "role",
+                        "description": "User Token",
+                        "name": "token",
                         "in": "header",
                         "required": true
                     },
@@ -300,8 +300,8 @@ const docTemplate = `{
                 "parameters": [
                     {
                         "type": "string",
-                        "description": "Role",
-                        "name": "role",
+                        "description": "User Token",
+                        "name": "token",
                         "in": "header",
                         "required": true
                     },
@@ -350,8 +350,8 @@ const docTemplate = `{
                 "parameters": [
                     {
                         "type": "string",
-                        "description": "Role",
-                        "name": "role",
+                        "description": "User Token",
+                        "name": "token",
                         "in": "header",
                         "required": true
                     },
@@ -413,8 +413,8 @@ const docTemplate = `{
                 "parameters": [
                     {
                         "type": "string",
-                        "description": "Role",
-                        "name": "role",
+                        "description": "User Token",
+                        "name": "token",
                         "in": "header",
                         "required": true
                     },
@@ -465,8 +465,8 @@ const docTemplate = `{
                 "parameters": [
                     {
                         "type": "string",
-                        "description": "Role",
-                        "name": "role",
+                        "description": "User Token",
+                        "name": "token",
                         "in": "header",
                         "required": true
                     },
@@ -528,8 +528,8 @@ const docTemplate = `{
                 "parameters": [
                     {
                         "type": "string",
-                        "description": "Role",
-                        "name": "role",
+                        "description": "User Token",
+                        "name": "token",
                         "in": "header",
                         "required": true
                     },
@@ -591,8 +591,8 @@ const docTemplate = `{
                 "parameters": [
                     {
                         "type": "string",
-                        "description": "Role",
-                        "name": "role",
+                        "description": "User Token",
+                        "name": "token",
                         "in": "header",
                         "required": true
                     },
@@ -654,8 +654,8 @@ const docTemplate = `{
                 "parameters": [
                     {
                         "type": "string",
-                        "description": "Role",
-                        "name": "role",
+                        "description": "User Token",
+                        "name": "token",
                         "in": "header",
                         "required": true
                     },
@@ -719,8 +719,8 @@ const docTemplate = `{
                 "parameters": [
                     {
                         "type": "string",
-                        "description": "Role",
-                        "name": "role",
+                        "description": "User Token",
+                        "name": "token",
                         "in": "header",
                         "required": true
                     },
@@ -784,8 +784,8 @@ const docTemplate = `{
                 "parameters": [
                     {
                         "type": "string",
-                        "description": "Role",
-                        "name": "role",
+                        "description": "User Token",
+                        "name": "token",
                         "in": "header",
                         "required": true
                     }
@@ -830,20 +830,6 @@ const docTemplate = `{
                 ],
                 "summary": "User Login",
                 "parameters": [
-                    {
-                        "type": "string",
-                        "description": "Role",
-                        "name": "role",
-                        "in": "header",
-                        "required": true
-                    },
-                    {
-                        "type": "string",
-                        "description": "Client ID",
-                        "name": "id",
-                        "in": "path",
-                        "required": true
-                    },
                     {
                         "description": "User login",
                         "name": "body",
@@ -895,20 +881,6 @@ const docTemplate = `{
                 ],
                 "summary": "Registers New User",
                 "parameters": [
-                    {
-                        "type": "string",
-                        "description": "Role",
-                        "name": "role",
-                        "in": "header",
-                        "required": true
-                    },
-                    {
-                        "type": "string",
-                        "description": "Client ID",
-                        "name": "id",
-                        "in": "path",
-                        "required": true
-                    },
                     {
                         "description": "User Information",
                         "name": "body",
@@ -962,8 +934,8 @@ const docTemplate = `{
                 "parameters": [
                     {
                         "type": "string",
-                        "description": "Role",
-                        "name": "role",
+                        "description": "User Token",
+                        "name": "token",
                         "in": "header",
                         "required": true
                     },
@@ -1012,8 +984,8 @@ const docTemplate = `{
                 "parameters": [
                     {
                         "type": "string",
-                        "description": "Role",
-                        "name": "role",
+                        "description": "User Token",
+                        "name": "token",
                         "in": "header",
                         "required": true
                     },
@@ -1075,8 +1047,8 @@ const docTemplate = `{
                 "parameters": [
                     {
                         "type": "string",
-                        "description": "Role",
-                        "name": "role",
+                        "description": "User Token",
+                        "name": "token",
                         "in": "header",
                         "required": true
                     },

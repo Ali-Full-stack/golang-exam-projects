@@ -28,8 +28,8 @@
                 "parameters": [
                     {
                         "type": "string",
-                        "description": "Role",
-                        "name": "role",
+                        "description": "User Token",
+                        "name": "token",
                         "in": "header",
                         "required": true
                     },
@@ -86,8 +86,8 @@
                 "parameters": [
                     {
                         "type": "string",
-                        "description": "Role",
-                        "name": "role",
+                        "description": "User Token",
+                        "name": "token",
                         "in": "header",
                         "required": true
                     },
@@ -136,8 +136,8 @@
                 "parameters": [
                     {
                         "type": "string",
-                        "description": "Role",
-                        "name": "role",
+                        "description": "User Token",
+                        "name": "token",
                         "in": "header",
                         "required": true
                     },
@@ -188,8 +188,8 @@
                 "parameters": [
                     {
                         "type": "string",
-                        "description": "Role",
-                        "name": "role",
+                        "description": "User Token",
+                        "name": "token",
                         "in": "header",
                         "required": true
                     }
@@ -234,8 +234,8 @@
                 "parameters": [
                     {
                         "type": "string",
-                        "description": "Role",
-                        "name": "role",
+                        "description": "User Token",
+                        "name": "token",
                         "in": "header",
                         "required": true
                     },
@@ -292,8 +292,8 @@
                 "parameters": [
                     {
                         "type": "string",
-                        "description": "Role",
-                        "name": "role",
+                        "description": "User Token",
+                        "name": "token",
                         "in": "header",
                         "required": true
                     },
@@ -342,8 +342,8 @@
                 "parameters": [
                     {
                         "type": "string",
-                        "description": "Role",
-                        "name": "role",
+                        "description": "User Token",
+                        "name": "token",
                         "in": "header",
                         "required": true
                     },
@@ -405,8 +405,8 @@
                 "parameters": [
                     {
                         "type": "string",
-                        "description": "Role",
-                        "name": "role",
+                        "description": "User Token",
+                        "name": "token",
                         "in": "header",
                         "required": true
                     },
@@ -457,8 +457,8 @@
                 "parameters": [
                     {
                         "type": "string",
-                        "description": "Role",
-                        "name": "role",
+                        "description": "User Token",
+                        "name": "token",
                         "in": "header",
                         "required": true
                     },
@@ -520,8 +520,8 @@
                 "parameters": [
                     {
                         "type": "string",
-                        "description": "Role",
-                        "name": "role",
+                        "description": "User Token",
+                        "name": "token",
                         "in": "header",
                         "required": true
                     },
@@ -583,8 +583,8 @@
                 "parameters": [
                     {
                         "type": "string",
-                        "description": "Role",
-                        "name": "role",
+                        "description": "User Token",
+                        "name": "token",
                         "in": "header",
                         "required": true
                     },
@@ -646,8 +646,8 @@
                 "parameters": [
                     {
                         "type": "string",
-                        "description": "Role",
-                        "name": "role",
+                        "description": "User Token",
+                        "name": "token",
                         "in": "header",
                         "required": true
                     },
@@ -711,8 +711,8 @@
                 "parameters": [
                     {
                         "type": "string",
-                        "description": "Role",
-                        "name": "role",
+                        "description": "User Token",
+                        "name": "token",
                         "in": "header",
                         "required": true
                     },
@@ -776,8 +776,8 @@
                 "parameters": [
                     {
                         "type": "string",
-                        "description": "Role",
-                        "name": "role",
+                        "description": "User Token",
+                        "name": "token",
                         "in": "header",
                         "required": true
                     }
@@ -822,20 +822,6 @@
                 ],
                 "summary": "User Login",
                 "parameters": [
-                    {
-                        "type": "string",
-                        "description": "Role",
-                        "name": "role",
-                        "in": "header",
-                        "required": true
-                    },
-                    {
-                        "type": "string",
-                        "description": "Client ID",
-                        "name": "id",
-                        "in": "path",
-                        "required": true
-                    },
                     {
                         "description": "User login",
                         "name": "body",
@@ -887,20 +873,6 @@
                 ],
                 "summary": "Registers New User",
                 "parameters": [
-                    {
-                        "type": "string",
-                        "description": "Role",
-                        "name": "role",
-                        "in": "header",
-                        "required": true
-                    },
-                    {
-                        "type": "string",
-                        "description": "Client ID",
-                        "name": "id",
-                        "in": "path",
-                        "required": true
-                    },
                     {
                         "description": "User Information",
                         "name": "body",
@@ -954,8 +926,8 @@
                 "parameters": [
                     {
                         "type": "string",
-                        "description": "Role",
-                        "name": "role",
+                        "description": "User Token",
+                        "name": "token",
                         "in": "header",
                         "required": true
                     },
@@ -1004,8 +976,8 @@
                 "parameters": [
                     {
                         "type": "string",
-                        "description": "Role",
-                        "name": "role",
+                        "description": "User Token",
+                        "name": "token",
                         "in": "header",
                         "required": true
                     },
@@ -1067,8 +1039,8 @@
                 "parameters": [
                     {
                         "type": "string",
-                        "description": "Role",
-                        "name": "role",
+                        "description": "User Token",
+                        "name": "token",
                         "in": "header",
                         "required": true
                     },
