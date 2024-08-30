@@ -26,7 +26,6 @@ func NewHotelHandler(hcl hpb.HotelServiceClient) *HotelHandler {
 // @Tags					 HOTELS
 // @accept					json
 // @Produce				  json
-// @Param 					role    header    string    true    "Role"
 // @Param 					body    body    hotel.HotelInfo    true  "Hotel  Details"
 // @Success					201 	{object}   hotel.HotelID	"Hotel  ID"
 // @Failure					 400 {object} error "Unable to read Hotel information !"
@@ -61,7 +60,6 @@ func (h *HotelHandler) CreateHotel(w http.ResponseWriter, r *http.Request) {
 // @Tags					 ROOMS
 // @accept					json
 // @Produce				  json
-// @Param 					role    header    string    true    "Role"
 // @Param 					id     path    	string    true    "Hotel ID"
 // @Param 					body    body    hotel.RoomInfo    true  "Room  Details"
 // @Success					201 	{object}   hotel.HotelResponse	"Room Created Succesfully"
@@ -100,7 +98,6 @@ func (h *HotelHandler) CreateHotelRoom(w http.ResponseWriter, r *http.Request) {
 // @Tags					 HOTELS
 // @accept					json
 // @Produce				  json
-// @Param 					role    header    string    true    "Role"
 // @Param 					id     path    	string    true    "Hotel ID"
 // @Param 					body    body    hotel.HotelInfo    true  "Hotel  Details"
 // @Success					201 	{object}   hotel.HotelResponse	"Hotel Updated Succesfully"
@@ -139,7 +136,6 @@ func (h *HotelHandler) UpdateHotel(w http.ResponseWriter, r *http.Request) {
 // @Tags					 ROOMS
 // @accept					json
 // @Produce				  json
-// @Param 					role    header    string    true    "Role"
 // @Param 					id     path    	string    true    "Hotel ID"
 // @Param 					body    body    hotel.RoomInfo    true  "Room  Details"
 // @Success					201 	{object}   hotel.HotelResponse	"Room Updated Succesfully"
@@ -176,7 +172,6 @@ func (h *HotelHandler) UpdateHotelRoom(w http.ResponseWriter, r *http.Request) {
 // @Tags					 HOTELS
 // @accept					json
 // @Produce				  json
-// @Param 					role    header    string    true    "Role"
 // @Param 					id     path    	string    true    "Hotel ID"
 // @Success					201 	{object}   hotel.HotelResponse	"Hotel Deleted Succesfully"
 // @Failure					 500 {object} error  "Unable to get response"
@@ -200,7 +195,6 @@ func (h *HotelHandler) DeleteHotel(w http.ResponseWriter, r *http.Request) {
 // @Tags					 ROOMS
 // @accept					json
 // @Produce				  json
-// @Param 					role    header    string    true    "Role"
 // @Param 					id     path    	string    true    "Hotel ID"
 // @Param 					body    body    model.Room    true  "Room  Details"
 // @Success					201 	{object}   hotel.HotelResponse	"Room Deleted Succesfully"
@@ -231,7 +225,6 @@ func (h *HotelHandler) DeleteHotelRoom(w http.ResponseWriter, r *http.Request) {
 // @Tags					 HOTELS
 // @accept					json
 // @Produce				  json
-// @Param 					role    header    string    true    "Role"
 // @Success					200 	{object}   []hotel.HotelInfo	"Hotel Updated Succesfully"
 // @Failure					 500 {object} error  "Unable to get response"
 // @Failure					 403 {object} error "Unauthorized access"
@@ -265,7 +258,6 @@ func (h *HotelHandler) GetAllHotels(w http.ResponseWriter, r *http.Request) {
 // @Tags					 HOTELS
 // @accept					json
 // @Produce				  json
-// @Param 					role    header    string    true    "Role"
 // @Param 					id    path    string    true    "Hotel ID"
 // @Success					200 	{object}   hotel.HotelWithRoom	"Hotel Details"
 // @Failure					 500 {object} error  "Unable to get response"
@@ -288,7 +280,6 @@ func (h *HotelHandler) GetHotelById(w http.ResponseWriter, r *http.Request) {
 // @Tags					 ROOMS
 // @accept					json
 // @Produce				  json
-// @Param 					role    header    string    true    "Role"
 // @Param 					id     path    	string    true    "Hotel ID"
 // @Param 					body    body    model.Room    true  "Room  Details"
 // @Success					201 	{object}   hotel.RoomResponse	"Room Details"
@@ -320,7 +311,6 @@ func (h *HotelHandler) CheckAvailableRooms(w http.ResponseWriter, r *http.Reques
 // @Tags					 ROOMS
 // @accept					json
 // @Produce				  json
-// @Param 					role    header    string    true    "Role"
 // @Param 					id     path    	string    true    "Hotel ID"
 // @Param 					body    body    model.Room    true  "Room  Details"
 // @Success					201 	{object}   hotel.CountResponse	"Room Details"

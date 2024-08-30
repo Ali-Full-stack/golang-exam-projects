@@ -24,8 +24,6 @@ func NewUserHandler(u upb.UserServiceClient) *UserHandler {
 // @Tags					 USERS
 // @accept					json
 // @Produce				  json
-// @Param 					role    header    string    true    "Role"
-// @Param 					id    	path        string    true    "Client ID"
 // @Param 					body    body    model.UserInfo    true  "User Information"
 // @Success					201 	{object}   user.UserID		"User ID"
 // @Failure					 400 {object} error "Invalid Request Body"
@@ -60,8 +58,6 @@ func (u *UserHandler) RegisterNewUser(w http.ResponseWriter, r *http.Request) {
 // @Tags					 USERS
 // @accept					json
 // @Produce				  json
-// @Param 					role    header    string    true    "Role"
-// @Param 					id    	path        string    true    "Client ID"
 // @Param 					body    body    model.UserLogin    true  "User login"
 // @Success					201 	{object}   user.UserToken		"User Token"
 // @Failure					 400 {object} error "Invalid Request Body"
@@ -94,7 +90,6 @@ func (u *UserHandler) UserLogin(w http.ResponseWriter, r *http.Request) {
 // @Tags					 USERS
 // @accept					json
 // @Produce				  json
-// @Param 					role    header    string    true    "Role"
 // @Param 					id    	path        string    true    "User  ID"
 // @Param 					body    body    model.UserInfo    true  "User Information"
 // @Success					201 	{object}   user.UserResponse		"Response"
@@ -131,7 +126,6 @@ func (u *UserHandler) UpdateUser(w http.ResponseWriter, r *http.Request) {
 // @Tags					 USERS
 // @accept					json
 // @Produce				  json
-// @Param 					role    header    string    true    "Role"
 // @Param 					id    	path        string    true    "User  ID"
 // @Success					201 	{object}   user.UserResponse		"Response"
 // @Failure					 500 {object} error  "Unable to get response"
@@ -154,7 +148,6 @@ func (u *UserHandler) DeleteUser(w http.ResponseWriter, r *http.Request) {
 // @Tags					 USERS
 // @accept					json
 // @Produce				  json
-// @Param 					role    header    string    true    "Role"
 // @Success					201 	{object}   []user.UserWithID		"User Information"
 // @Failure					 500 {object} error  "Unable to get response"
 // @Failure					 403 {object} error "Unauthorized access"
@@ -189,7 +182,6 @@ func (u *UserHandler) GetAllUsers(w http.ResponseWriter, r *http.Request) {
 // @Tags					 USERS
 // @accept					json
 // @Produce				  json
-// @Param 					role    header    string    true    "Role"
 // @Param 					id    	path        string    true    "Client ID"
 // @Success					201 	{object}   user.UserWithID		"User ID"
 // @Failure					 500 {object} error  "Unable to get response"

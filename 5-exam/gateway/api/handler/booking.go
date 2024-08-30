@@ -24,7 +24,6 @@ func NewBookingHandler(bcl bpb.BookingServiceClient) *BookingHandler {
 // @Tags					 BOOKINGS
 // @accept					json
 // @Produce				  json
-// @Param 					role    header    string    true    "Role"
 // @Param 					body    body    booking.BookingInfo    true  "Booking Details"
 // @Success					201 	{object}   booking.BookingResponse		"Booking  Confirmation"
 // @Failure					 400 {object} error "Unable to read booking  details !"
@@ -59,7 +58,6 @@ func (b *BookingHandler) CreateBooking(w http.ResponseWriter, r *http.Request) {
 // @Tags					 BOOKINGS
 // @accept					json
 // @Produce				  json
-// @Param 					role    header    string    true    "Role"
 // @Param 					id    	path    string    true    "Booking ID"
 // @Success					201 	{object}   booking.Response		"Deleted Succesfully"
 // @Failure					 500 {object} error  "Unable to get response"
@@ -82,7 +80,6 @@ func (b *BookingHandler) DeleteBooking(w http.ResponseWriter, r *http.Request) {
 // @Tags					 BOOKINGS
 // @accept					json
 // @Produce				  json
-// @Param 					role    header    string    true    "Role"
 // @Param 					id    	path    string    true    "Booking ID"
 // @Success					201 	{object}   booking.Response		"Deleted Succesfully"
 // @Failure					 500 {object} error  "Unable to get response"
