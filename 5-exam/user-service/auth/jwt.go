@@ -25,20 +25,3 @@ func GenerateToken(id , role string) (*protos.UserToken, error) {
 	return &protos.UserToken{Token: accessToken, ExpiryInMin: 30}, nil
 }
 
-func VerifyToken(tokenstring string) (string, error) {
-	token, err := jwt.Parse(tokenstring, func(token *jwt.Token) (interface{}, error) {
-		return []byte(os.Getenv("secret_key")), nil
-	})
-	if err != nil && !token.Valid {
-		return "", fmt.Errorf("invalid Token")
-
-	}
-	if claims, ok := token.Claims.(jwt.MapClaims); ok {
-		role, ok := claims["role"].(string)
-		if !ok {
-			return "", fmt.Errorf("no role found in the JWT")
-		}
-		return role, nil
-	}
-	return "", fmt.Errorf("invalid token")
-}

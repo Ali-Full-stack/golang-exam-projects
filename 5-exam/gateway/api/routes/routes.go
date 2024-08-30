@@ -2,6 +2,7 @@ package routes
 
 import (
 	"gateway/api/handler"
+	"gateway/api/middleware"
 	_ "gateway/api/swagger/docs"
 	"gateway/client"
 	ratelimiting "gateway/internal/rateLimiting"
@@ -9,7 +10,7 @@ import (
 	"net/http"
 	"os"
 	"time"
-	_"gateway/api/swagger/docs"
+
 	_ "github.com/joho/godotenv/autoload"
 	swag "github.com/swaggo/http-swagger"
 )
@@ -33,29 +34,29 @@ func Routes() {
 
 	mux.HandleFunc("POST /api/users/register", rateLimit.Limit(userHandler.RegisterNewUser))
 	mux.HandleFunc("POST /api/users/login", rateLimit.Limit(userHandler.UserLogin))
-	mux.HandleFunc("PUT /api/users/{id}", rateLimit.Limit(userHandler.UpdateUser))
-	mux.HandleFunc("DELETE /api/users/{id}", rateLimit.Limit(userHandler.DeleteUser))
-	mux.HandleFunc("GET /api/users", rateLimit.Limit(userHandler.GetAllUsers))
-	mux.HandleFunc("GET /api/users/{id}", rateLimit.Limit(userHandler.GetUserById))
+	mux.Handle("PUT /api/users/{id}", middleware.ConfirmToken(rateLimit.Limit(userHandler.UpdateUser)))
+	mux.Handle("DELETE /api/users/{id}", middleware.ConfirmToken(rateLimit.Limit(userHandler.DeleteUser)))
+	mux.Handle("GET /api/users", middleware.ConfirmToken(rateLimit.Limit(userHandler.GetAllUsers)))
+	mux.Handle("GET /api/users/{id}", middleware.ConfirmToken(rateLimit.Limit(userHandler.GetUserById)))
 
 	hotelClient := client.DialHotelClient(os.Getenv("hotel_url"))
 	hotelHandler := handler.NewHotelHandler(hotelClient)
-	mux.HandleFunc("POST /api/hotels", rateLimit.Limit(hotelHandler.CreateHotel))
-	mux.HandleFunc("POST /api/hotels/{id}/rooms", rateLimit.Limit(hotelHandler.CreateHotelRoom))
-	mux.HandleFunc("PUT /api/hotels/{id}", rateLimit.Limit(hotelHandler.UpdateHotel))
-	mux.HandleFunc("PUT /api/hotels/{id}/rooms", rateLimit.Limit(hotelHandler.UpdateHotelRoom))
-	mux.HandleFunc("DELETE /api/hotels/{id}", rateLimit.Limit(hotelHandler.DeleteHotel))
-	mux.HandleFunc("DELETE /api/hotels/{id}/rooms", rateLimit.Limit(hotelHandler.DeleteHotelRoom))
-	mux.HandleFunc("GET /api/hotels", rateLimit.Limit(hotelHandler.GetAllHotels))
-	mux.HandleFunc("GET /api/hotels/{id}", rateLimit.Limit(hotelHandler.GetHotelById))
-	mux.HandleFunc("POST /api/hotels/{id}/rooms/availability", rateLimit.Limit(hotelHandler.CheckAvailableRooms))
-	mux.HandleFunc("PATCH /api/hotels/{id}/rooms", rateLimit.Limit(hotelHandler.UpdateRoomCount))
+	mux.Handle("POST /api/hotels", middleware.ConfirmToken(rateLimit.Limit(hotelHandler.CreateHotel)))
+	mux.Handle("POST /api/hotels/{id}/rooms", middleware.ConfirmToken(rateLimit.Limit(hotelHandler.CreateHotelRoom)))
+	mux.Handle("PUT /api/hotels/{id}", middleware.ConfirmToken(rateLimit.Limit(hotelHandler.UpdateHotel)))
+	mux.Handle("PUT /api/hotels/{id}/rooms", middleware.ConfirmToken(rateLimit.Limit(hotelHandler.UpdateHotelRoom)))
+	mux.Handle("DELETE /api/hotels/{id}", middleware.ConfirmToken(rateLimit.Limit(hotelHandler.DeleteHotel)))
+	mux.Handle("DELETE /api/hotels/{id}/rooms", middleware.ConfirmToken(rateLimit.Limit(hotelHandler.DeleteHotelRoom)))
+	mux.Handle("GET /api/hotels", middleware.ConfirmToken(rateLimit.Limit(hotelHandler.GetAllHotels)))
+	mux.Handle("GET /api/hotels/{id}", middleware.ConfirmToken(rateLimit.Limit(hotelHandler.GetHotelById)))
+	mux.Handle("POST /api/hotels/{id}/rooms/availability", middleware.ConfirmToken(rateLimit.Limit(hotelHandler.CheckAvailableRooms)))
+	mux.Handle("PATCH /api/hotels/{id}/rooms", middleware.ConfirmToken(rateLimit.Limit(hotelHandler.UpdateRoomCount)))
 
 	bookingClient := client.DialBookingClient(os.Getenv("booking_url"))
 	bookingHandler := handler.NewBookingHandler(bookingClient)
-	mux.HandleFunc("POST /api/bookings", rateLimit.Limit(bookingHandler.CreateBooking))
-	mux.HandleFunc("DELETE /api/bookings/{id}", rateLimit.Limit(bookingHandler.DeleteBooking))
-	mux.HandleFunc("GET /api/bookings/{id}", rateLimit.Limit(bookingHandler.GetBookingById))
+	mux.Handle("POST /api/bookings", middleware.ConfirmToken(rateLimit.Limit(bookingHandler.CreateBooking)))
+	mux.Handle("DELETE /api/bookings/{id}", middleware.ConfirmToken(rateLimit.Limit(bookingHandler.DeleteBooking)))
+	mux.Handle("GET /api/bookings/{id}", middleware.ConfirmToken(rateLimit.Limit(bookingHandler.GetBookingById)))
 
 	mux.Handle("/swagger/", swag.WrapHandler)
 
