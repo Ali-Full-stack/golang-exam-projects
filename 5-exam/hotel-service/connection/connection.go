@@ -39,9 +39,7 @@ func GrpcConn() {
 	grpcServer := grpc.NewServer()
 	protos.RegisterHotelServiceServer(grpcServer, hotelService)
 	
-	go func() {
-		pkg.Shutdown(grpcServer)
-		}()
+	go pkg.Shutdown(grpcServer)
 		
 	log.Println("Hotel-Service: server is listening on port ", os.Getenv("hotel_server"))
 	log.Fatal(grpcServer.Serve(lis))

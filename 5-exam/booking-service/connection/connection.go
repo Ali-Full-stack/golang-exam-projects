@@ -41,9 +41,7 @@ func GrpcConn() {
 	grpcServer := grpc.NewServer()
 	booking.RegisterBookingServiceServer(grpcServer, bookingService)
 
-	go func() {
-		pkg.Shutdown(grpcServer)
-	}()
+	go pkg.Shutdown(grpcServer)
 
 	log.Println("Booking-Service: server is listening on port ", os.Getenv("booking_server"))
 	log.Fatal(grpcServer.Serve(lis))
