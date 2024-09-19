@@ -1,0 +1,63 @@
+definitions:
+  notification.Notify:
+    properties:
+      date:
+        type: string
+      message:
+        type: string
+      report:
+        $ref: '#/definitions/notification.Report'
+      user_id:
+        type: string
+    type: object
+  notification.NotifyList:
+    properties:
+      notifyList:
+        items:
+          $ref: '#/definitions/notification.Notify'
+        type: array
+    type: object
+  notification.Report:
+    properties:
+      expenses:
+        type: number
+      income:
+        type: number
+      netSavings:
+        type: number
+    type: object
+info:
+  contact: {}
+  description: This swagger UI was created to manage personal finance
+  title: PERSONAL FINANCE MANAGEMENT
+  version: "1.0"
+paths:
+  /api/notifications/unread:
+    get:
+      description: This method retrieves all unread notifications for the user
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: List of unread notifications
+          schema:
+            items:
+              $ref: '#/definitions/notification.NotifyList'
+            type: array
+        "403":
+          description: Permission Denied
+          schema: {}
+        "500":
+          description: Unable to get unread notifications
+          schema: {}
+      security:
+      - BearerAuth: []
+      summary: Get unread notifications
+      tags:
+      - NOTIFICATIONS
+securityDefinitions:
+  BearerAuth:
+    in: header
+    name: Authorization
+    type: apiKey
+swagger: "2.0"

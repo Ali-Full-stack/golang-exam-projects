@@ -1,0 +1,30 @@
+syntax  = "proto3";
+
+option go_package = "./proto/notification";
+
+service NotificationService {
+    rpc GetNotfication(NotifyEmpty) returns (NotifyList);
+    rpc GetUnreadNotfications(NotifyEmpty) returns (NotifyList);
+}
+
+message NotifyEmpty{}
+
+message Notify{
+    string user_id = 2;
+    string message = 4;
+    Report report = 3;
+    string date = 5;
+}
+
+message Report{
+    double income = 1;
+    double expenses =2;
+    double netSavings = 3;
+}
+
+message NotifyList{
+    repeated Notify notifyList = 1;
+}
+
+
+
