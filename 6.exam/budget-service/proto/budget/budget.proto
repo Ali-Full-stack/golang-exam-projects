@@ -1,0 +1,51 @@
+syntax="proto3";
+
+
+option go_package="./proto/budget";
+
+service BudgetService {
+    rpc CreateBudget(BudgetInfo) returns(BudgetID);
+    rpc UpdateBudgetAmount(BudgetUpdate) returns(BudgetResponse);
+    rpc GetBudgets(Empty) returns(stream BudgetWithID);
+    rpc DeleteBudgetByID(BudgetID) returns(BudgetResponse);
+    rpc GetBudgetReports(Empty) returns(BudgetReport);
+    rpc AddSpentAmount(SpentRequest) returns(BudgetResponse);
+}
+
+message SpentRequest {
+    string id =1 ;
+    double amount = 2;
+}
+
+
+message BudgetInfo {
+    string category = 1;
+    double amount = 2;
+    double  spent = 3;
+    string currency = 4;
+}
+message BudgetID {
+    string id = 1;
+}
+message BudgetWithID {
+    string id = 1;
+    string category = 2;
+    double amount = 3;
+    double  spent = 4;
+    string currency = 5;
+}
+message BudgetResponse {
+    string message = 1;
+}
+message BudgetUpdate {
+    string id = 1;
+    double amount = 2;
+}
+
+message BudgetReport {
+    double total_budget = 1;
+    double total_spent = 2;
+    double remaining_budget = 3;
+}
+
+message Empty {}

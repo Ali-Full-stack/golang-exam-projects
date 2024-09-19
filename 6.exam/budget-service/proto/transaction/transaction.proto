@@ -1,0 +1,34 @@
+syntax="proto3";
+
+option go_package="./proto/transaction";
+
+
+service ReportService {
+    rpc GetReport(Empty) returns (ReportResponse);
+    rpc GetReportByType(TypeRequest) returns(TypeResponse); 
+    rpc GetReportByCategory(CategoryRequest) returns (Category);
+}
+
+message Empty {}
+
+message ReportResponse {
+    double income = 1;
+    double expenses = 2;
+    double netSavings = 3;
+}
+
+message TypeRequest {
+    string type =1;
+}
+message TypeResponse {
+    string type =1;
+    repeated Category category = 2;
+}
+message Category {
+    string category = 1;
+    double amount = 2; 
+}
+message CategoryRequest {
+    string type = 1;
+    string category = 2;
+}
