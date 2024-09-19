@@ -1,0 +1,52 @@
+syntax="proto3";
+
+option go_package="./proto";
+
+
+service UserService {
+    rpc CreateUser(UserInfo) returns(UserWithID);
+    rpc LoginUser(UserLogin) returns (UserToken);
+    rpc ForgotPassword(UserID) returns(UserEmail);
+    rpc UpdatePassword(UserPassword) returns (UserResponse);
+    rpc LogOutUser(UserID) returns (UserResponse);
+    rpc GetUserById(UserID) returns (UserWithID);
+ }
+
+ message UserInfo {
+    string name = 1;
+    string email = 2;
+    string password = 3;
+ }
+ message UserWithID {
+    string id = 1;
+    string name = 2;
+    string email = 3;
+ }
+ message UserID {
+    string id  = 1;
+ }
+ message UserLogin {
+    string id =1 ;
+    string password = 2;
+ }
+
+ message UserToken {
+    string token = 1;
+ }
+
+ message UserResponse {
+    string message = 1;
+ }
+ message UserEmail {
+    string email = 1;
+ }
+ message UserPassword{
+    string email = 2;
+    string password =1;
+ }
+
+
+
+
+
+
