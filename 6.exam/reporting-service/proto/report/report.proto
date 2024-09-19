@@ -1,0 +1,26 @@
+syntax="proto3";
+
+option go_package="./proto/report";
+
+
+service ReportService {
+    rpc GetReport(ReportEmpty) returns (ReportResponse);
+}
+
+message ReportEmpty {}
+
+message ReportResponse {
+    double income = 1;
+    double expenses = 2;
+    double netSavings = 3;
+    Budget  budget = 4;
+}
+message Budget {
+    double totalAmount = 1;
+    double totalSpent = 2;
+    double remainingBudget = 3;
+}
+
+message ReportID {
+    string id = 1;
+}

@@ -1,0 +1,58 @@
+syntax="proto3";
+
+option go_package = "./proto/transaction";
+
+service TransactionService {
+    rpc CreateTransaction( TransactionInfo) returns (TransactionID);
+    rpc UpdateTransactionByID( TransactionWithID) returns(TransactionResponse);
+    rpc DeleteTransactionByID( TransactionID) returns (TransactionResponse);
+    rpc GetTransactionByID ( TransactionID) returns (TransactionWithID);
+    rpc GetTransactionsByCategory( TransactionCategory) returns (ListTransactions);
+    rpc GetTransactionByDate(TransactionDate) returns (ListTransactions);
+    rpc GetReport(Empty) returns (ReportResponse);
+}
+message Empty {}
+
+message ReportResponse {
+    double income = 1;
+    double expenses = 2;
+    double netSavings = 3;
+}
+
+message TransactionInfo {
+    string type = 1;
+    string category = 2;
+    string currency = 3;
+    double amount = 4;
+}
+message TransactionID {
+    string id = 1;
+}
+
+message TransactionWithID {
+    string id = 1;
+    string type = 2;
+    string category = 3;
+    string currency = 4;
+    double amount = 5;
+    string date = 6; 
+}
+
+message TransactionCategory {
+    string category = 1;
+}
+message ListTransactions {
+    repeated TransactionWithID listTransactions = 1;
+}
+message TransactionDate {
+    string type = 1;
+    string start = 2;
+    string end = 3;
+}
+message TransactionResponse {
+    string message = 1;
+}
+
+
+
+
